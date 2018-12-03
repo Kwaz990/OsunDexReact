@@ -118,7 +118,7 @@ class DashboardContainer extends Component {
             </div>
             <div class="">
                 <stencil-route-link class="hydrated"><a class="" href="/trade/ZRX-WETH"><span class="coin" title="0xProject">
-                            <div class="token-icon"><img src="/assets/tokens/img/zrx.svg" title="ZRX" class="token-field-img"
+                            <div class="token-icon"><img src="./assets/tokens/img/zrx.svg" title="ZRX" class="token-field-img"
                                     decoding="async" /></div>ZRX
                         </span><span class="price"><span>0.00346877</span></span><span class="orders" title="17">17</span><span
                             class="change" title="0.00%">0.00%</span><span class="volume" title="0">0.000</span></a></stencil-route-link>
@@ -140,7 +140,7 @@ class DashboardContainer extends Component {
             <div class="even">
                 <stencil-route-link class="hydrated"><a class="" href="/trade/STM-WETH"><span class="coin" title="Storm">
                             <div class="token-icon"><img src="/assets/tokens/img/stm.svg" title="STM" class="token-field-img"
-                                    decoding="async"/ ></div>STM
+                                    decoding="async"/></div>STM
                         </span><span class="price"><span>0.00003787</span></span><span class="orders" title="13">13</span><span
                             class="change" title="0.00%">0.00%</span><span class="volume" title="0">0.000</span></a></stencil-route-link>
             </div>
