@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
+import RecentBuyOrders from './components/RecentBuyOrders';
+import NavigationBar from './components/NavigationBar';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+import Route from 'react-router-dom/Route';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
+      <Router>
       <div className="App">
+        <NavigationBar />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            <RecentBuyOrders />
           </p>
           <a
             className="App-link"
@@ -21,6 +27,7 @@ class App extends Component {
           </a>
         </header>
       </div>
+      </Router>
     );
   }
 }
