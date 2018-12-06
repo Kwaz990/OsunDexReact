@@ -10,6 +10,8 @@
 
 # production
 /build
+#/0x-ganache_snapshot
+
 
 # misc
 .DS_Store
