@@ -14,16 +14,14 @@ import { OrderWatcher } from '@0x/order-watcher';
 
 
 class OrderBook extends Component {
-    constructor() {
-        super()
-        this.state = {
-          provider: Provider,
-          networkId: 0,
-          contractAddreses: '',
-          partialCondig: Partial<OrderWatcherConfig> = DEFAULT_ORDER_WATCHER_CONFIG,): OrderWatcher
-        }
-
-        
+   // constructor() {
+     //   super()
+      //  this.state = {
+     //     provider: Provider,
+       //   networkId: 0,
+         // contractAddreses: ''
+         // partialCondig: Partial<OrderWatcherConfig> = DEFAULT_ORDER_WATCHER_CONFIG,): OrderWatcher
+        //};
 
 
 
@@ -39,6 +37,6 @@ class OrderBook extends Component {
     </div>
         );
     };
-}
-}
+};
+
 export default OrderBook;

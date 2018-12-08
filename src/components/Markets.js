@@ -18,6 +18,7 @@ class Markets extends Component {
       <div>
         <Charts />
         <BuyBox />
+        <Buy />
         <SellBox />
         <BuyOrders />
         <SellOrders />
