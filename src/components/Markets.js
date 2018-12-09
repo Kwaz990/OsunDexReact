@@ -9,8 +9,8 @@ import SellBox from './SellBox';
 import BuyOrders from './BuyOrders';
 import SellOrders from './SellOrders';
 import OrderHistory from './OrderHistory';
-
-
+import OrderBook from './OrderBook';
+import TestOrders from './testOrders';
 
 class Markets extends Component {
     render(){
@@ -20,9 +20,8 @@ class Markets extends Component {
         <BuyBox />
         <Buy />
         <SellBox />
-        <BuyOrders />
-        <SellOrders />
-        <OrderHistory />
+        <TestOrders />
+        <OrderBook />
     </div>
         );
     };

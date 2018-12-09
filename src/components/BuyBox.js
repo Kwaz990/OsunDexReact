@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Route from 'react-router-dom/Route';
-import Sell from './Sell';
-import Buy from './Buy';
-import Charts from './Charts';
+
 import {
     assetDataUtils,
     BigNumber,
@@ -26,6 +24,61 @@ import { scenarioAsync as fillOrderERC20 } from '../scenarios/fill_order_erc20';
 
 
 class BuyBox extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          color: 'blue',
+          bool: 'False',
+          Amount: 0.00,
+          Price: 0.00
+        };
+        this.handleAmountChange = this.handleAmountChange.bind(this);
+        this.handlePriceChange = this.handlePriceChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.onButtonClick = this.onButtonClick.bind(this);
+      }
+      handleAmountChange(event) {
+        const val = event.target.value;
+        this.setState(() => ({
+          Amount: val
+        }));
+      }
+      handlePriceChange(event) {
+        const val = event.target.value;
+        this.setState(() => ({
+          Price: val
+        }));
+      }
+      onButtonClick() {
+        void (async () => {
+          try {
+            await fillOrderERC20();
+          } catch (e) {
+            console.log(e);
+            providerEngine.stop();
+          //  process.exit(1);
+          }
+        })();
+        
+       // shell.exec('yarn scenario:fill_order_erc20'),
+        this.setState(() => ({
+          color:'green',
+          bool: 'True',
+        }));
+      }
+    
+      handleSubmit(event) {
+        event.preventDefault();
+        /*this.props.onButtonClick({
+          Amount: this.state.Amount,
+          Price: this.state.Price
+        });*/
+        this.setState(() => ({
+          Amount: '',
+          Price: ''
+        }));
+      }
+
     render(){
         return(
             <div>
@@ -76,7 +129,7 @@ class BuyBox extends Component {
                                             </div>
                                             <div></div>
                                         </div>  
-                                        <button type="button" class="trade-button disabled">Place Buy Order</button>
+                                        <button onClick={this.onButtonClick} type="button" class="trade-button disabled">Place Buy Order</button>
                                         </div>
         );
     };

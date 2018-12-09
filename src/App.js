@@ -6,6 +6,7 @@ import Route from 'react-router-dom/Route';
 import logo from './logo.svg';
 import './App.css';
 import {Web3Provider} from 'react-web3';
+import AvailableMarkets from './components/AvailableMarkets';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
           </header>
           <p className="DashboardContainer-intro">
           </p>
+          <AvailableMarkets />
         </Web3Provider>
         </div>
         </div>
